@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+venv/
+ENV/
+.venv/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff
+.ruff_cache/
+
+# mypy
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# uv
+uv.lock
+
+# Data directory (market data, results, factors, financials, charts, registry, cache — local only)
+/data/
+
+# Legacy data directories (migrated to /data/)
+.cache/
+storage/
+
+# 运行日志（本地运行态，非项目产物）
+/logs/
+
+# Reference projects
+参考项目/
+
+# pi agent 会话状态（本地运行态，非项目产物）
+.sisyphus/
+
+# Obsidian 工作区布局（机器相关 UI 状态）
+.obsidian/workspace.json

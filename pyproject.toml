@@ -1,0 +1,30 @@
+[project]
+name = "plum"
+version = "0.1.0"
+description = "Backtesting and live-trading framework for China A-shares: board-specific price limits, T+1, participation-based impact and delisting settlement"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "xtquant",
+    "baostock",
+    "pandas",
+    "numpy",
+    "pyarrow",
+    "rich>=13",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0.3",
+    "matplotlib>=3.7",
+    "requests>=2.32",
+]
+
+[tool.ruff.lint]
+ignore = ["F541"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

@@ -1,0 +1,57 @@
+[project]
+name = "plum"
+env = "dev"
+debug = true
+
+[data]
+db_path = "./data"
+market_path = "./data/market"
+financial_path = "./data/financial"
+results_path = "./data/results"
+factors_path = "./data/factors"
+charts_path = "./data/charts"
+registry_path = "./data/registry"
+ledger_path = "./data/ledger"
+cache_path = "./data/cache"
+benchmarks_path = "./data/benchmarks"
+storage_cache_path = "./data/cache/storage"
+factor_universe_cache_path = "./data/cache/factors/universe"
+bar_format = "parquet"
+validate_on_load = true
+
+[cost]
+commission_rate = 0.00025
+min_commission = 5.0
+stamp_tax = 0.0005
+transfer_fee = 0.00001
+slippage = 0.0
+
+[risk]
+max_position_pct = 0.1
+max_drawdown = 0.2
+limit_up_deal = false
+limit_down_deal = false
+
+[rule]
+cache_enabled = true
+
+[engine]
+backtest_start = "2020-01-01"
+backtest_end = "2024-12-31"
+initial_capital = 1000000
+exclude_st = true                     # 过滤 ST 股票
+
+[strategy]
+default = "buy_and_hold"
+
+[logging]
+level = "DEBUG"
+format = "rich"
+
+[broker]
+# QMT / miniQMT 极简版配置（默认值，安全信息通过环境变量覆盖）
+provider = "qmt"
+qmt_path = ""
+account_id = ""
+session_id = 9527
+trade_env = "sim"     # sim=模拟盘, real=实盘
